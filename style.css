@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: beige;
+}
+div{
+    display: flex;
+    margin: 20px 50% 0 50%;
+}
+canvas{
+    margin-top: 80px;
+    background-color: aqua;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.container {
+    width: 100%;
+
+    flex-direction: column;
+    min-height:  100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tool-box{
+    width: 110px;
+    background-color: blanchedalmond;
+    border-radius: 8px;
+    margin-left: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.botton-tool,.size-tool{
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botton-tool > span{
+    font-size: 5px;
+}
+button-tool:hover, .size-tool:hover{
+    background-color: red;
+}
+.input_color{
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: blueviolet;
+    cursor: pointer;
+    padding: 5px 7px;
+
+}
+
+.input_color::-webkit-color-swatch{
+    border-radius: 100px;
+}
+.size-tool{
+    padding: 10px;
+    height:auto;
+}
+.size-tool > span {
+    width: 100%;
+    background-color: black;
+    display: block;
+    border-radius: 100px;
+}
+.size-tool[data-size="5"] > span{
+    height: 5px;
+}
+.size-tool[data-size="10"] > span{
+    height: 10px;
+}
+.size-tool[data-size="15"] > span{
+    height: 15px;
+}
+.size-tool[data-size="20"] > span{
+    height: 20px;
+}
+header{
+    background-color: burlywood;
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 65px;
+}
