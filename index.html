@@ -1,57 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paint</title>
+    <link href="./css/output.css" rel="stylesheet">
+    <title>Login</title>
 </head>
-<body>
-    <section class="container">
-        <header></header>
-        <canvas width="600px" height="400px"></canvas>
-        <div>
-            <section class="tool-box" >
-                <button class="button-tool" data-action="brush"> 
-                    <span class="material-symbols-outlined">
-                        brush
-                    </span>
-                </button>
-                <button class="button-tool" data-action="rubber"> 
-                    <span class="material-symbols-outlined">
-                        ink_eraser
-                    </span>
-                </button>
-                <button class="button-tool"> 
-                    <input type="color" class="color-in">
-                </button>
-    
-            </section>
-            <section class="tool-box">
-                <button class="size-tool" data-size=5>
-                    <span class="stroke"></span>
-                </button>
-                <button class="size-tool" data-size=10>
-                    <span class="stroke"></span>
-                </button>
-                <button class="size-tool" data-size=15>
-                    <span class="stroke"></span>
-                </button>
-                <button class="size-tool" data-size=20>
-                    <span class="stroke"></span>
-                </button>
-            </section>
-            <section class="tool-box">
-                <button class="button-tool button-clear">
-                    <span class="material-symbols-outlined">
-                        recycling
-                    </span>
-                </button>
+<body class="font-serif flex flex-col items-center bg-gradient-to-r from-red-500 to-pink-500 min-h-screen">
 
-            </section>
-        </div>
-    </section>
-    <script src="script.js"></script>
+    <fieldset class="p-2 flex flex-col items-center justify-center bg-gray-400 my-20 border-2 border-solid border-black w-full max-w-2xl">
+        <h1 class="text-9xl text-center">&#10026;</h1>
+        <form class="text-center mt-5 mb-8 px-4 w-full max-w-md" method="POST" action="./php/login.php">
+            <label class="block mb-2" for="email">Email</label>
+            <input class="w-full px-3 py-2 mb-4 border-2 border-solid border-black" type="text" name="email" required>
+
+            <label class="block mb-2" for="password">Senha</label>
+            <input class="w-full px-3 py-2 mb-4 border-2 border-solid border-black" type="password" name="password" required>
+
+            <input type="submit" class="w-full bg-black hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-pink-500 rounded">
+
+            <p class="mt-4">
+                <a href="./html/cadastro.html" class="text-black hover:text-white">Não tenho cadastro!</a>
+            </p>
+        </form>
+    </fieldset>
+
 </body>
 </html>

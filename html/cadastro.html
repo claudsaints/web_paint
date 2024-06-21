@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/output.css" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+<body class="font-serif flex flex-col items-center bg-gradient-to-r from-red-500 to-pink-500 min-h-screen">
+
+    <fieldset class="p-2 flex flex-col items-center justify-center bg-gray-400 my-20 border-2 border-solid border-black w-full max-w-2xl">
+        <h1 class="text-9xl text-center">&#10026;</h1>
+        <form class="text-center mt-5 mb-8 px-4 w-full max-w-md">
+            <label class="block mb-2" for="nome">Nome</label>
+            <input class="w-full px-3 py-2 mb-4 border-2 border-solid border-black" type="text" name="nome" placeholder="Insira Seu Nome" required>
+
+            <label class="block mb-2" for="email">Email</label>
+            <input class="w-full px-3 py-2 mb-4 border-2 border-solid border-black" type="text" name="email" placeholder="Insira Seu Email" required>
+
+            <label class="block mb-2" for="password">Senha</label>
+            <input class="w-full px-3 py-2 mb-4 border-2 border-solid border-black" type="password" name="password" placeholder="Insira a Senha" required>
+
+            <label class="block mb-2" for="password2">Senha</label>
+            <input class="w-full px-3 py-2 mb-4 border-2 border-solid border-black" type="password" name="password2" placeholder="Repita a Senha"  required>
+
+            <input type="submit" class="w-full bg-black hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-pink-500 rounded">
+
+            <p class="mt-4">
+                <a href="../index.html" class="text-black hover:text-white">Voltar</a>
+            </p>
+        </form>
+    </fieldset>
+
+</body>
+</html>
