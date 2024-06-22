@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="container">
-        <header></header>
+        <header>&#10026;</header>
         <canvas width="600px" height="400px"></canvas>
         <div>
             <section class="tool-box" >
@@ -29,23 +29,17 @@
     
             </section>
             <section class="tool-box">
-                <button class="size-tool" data-size=5>
-                    <span class="stroke"></span>
-                </button>
-                <button class="size-tool" data-size=10>
-                    <span class="stroke"></span>
-                </button>
-                <button class="size-tool" data-size=15>
-                    <span class="stroke"></span>
-                </button>
-                <button class="size-tool" data-size=20>
-                    <span class="stroke"></span>
-                </button>
+                <input type="range" class="size-tool" min="20" max="80" value="5">
             </section>
             <section class="tool-box">
                 <button class="button-tool button-clear">
                     <span class="material-symbols-outlined">
                         recycling
+                    </span>
+                </button>
+                <button class="button-tool button-download">
+                    <span class="material-symbols-outlined">
+                        download
                     </span>
                 </button>
 

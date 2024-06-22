@@ -1,25 +1,20 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: beige;
+    margin: 0;  
+    padding: 0;
+    background-image: linear-gradient(#d31474,#b61f38,#c40d35);
 }
-div{
-    display: flex;
-    margin: 20px 50% 0 50%;
-}
+
 canvas{
     margin-top: 80px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 .container {
     width: 100%;
-
-    flex-direction: column;
     min-height:  100vh;
     display: flex;
     align-items: center;
@@ -58,7 +53,6 @@ button-tool:hover, .size-tool:hover{
     background-color: blueviolet;
     cursor: pointer;
     padding: 5px 7px;
-
 }
 
 .input_color::-webkit-color-swatch{
@@ -68,27 +62,19 @@ button-tool:hover, .size-tool:hover{
     padding: 10px;
     height:auto;
 }
-.size-tool > span {
+
+.sizetool > span {
     width: 100%;
     background-color: black;
     display: block;
     border-radius: 100px;
 }
-.size-tool[data-size="5"] > span{
-    height: 5px;
-}
-.size-tool[data-size="10"] > span{
-    height: 10px;
-}
-.size-tool[data-size="15"] > span{
-    height: 15px;
-}
-.size-tool[data-size="20"] > span{
-    height: 20px;
-}
 header{
-    background-color: burlywood;
+    background-color: rgb(148, 147, 148);
     display: flex;
+    align-items: center;
+    font-size: 50px;
+    justify-content: center;
     width: 100vw;
     position: fixed;
     top: 0;
