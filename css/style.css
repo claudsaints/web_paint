@@ -9,6 +9,7 @@ body{
 
 canvas{
     margin-top: 80px;
+    margin-left: 150px;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -21,6 +22,7 @@ canvas{
     justify-content: center;
 }
 .tool-box{
+    border: solid rgb(255, 255, 255);
     width: 110px;
     background-color: blanchedalmond;
     border-radius: 8px;
@@ -31,20 +33,8 @@ canvas{
     gap: 10px;
     margin-bottom: 10px;
 }
-.botton-tool,.size-tool{
-    height: 45px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.botton-tool > span{
-    font-size: 5px;
-}
-button-tool:hover, .size-tool:hover{
-    background-color: red;
+.button-tool:hover{
+    background-color: rgba(121, 104, 83, 0.829);
 }
 .input_color{
     width: 45px;
@@ -70,7 +60,7 @@ button-tool:hover, .size-tool:hover{
     border-radius: 100px;
 }
 header{
-    background-color: rgb(148, 147, 148);
+    border: solid rgb(255, 255, 255);
     display: flex;
     align-items: center;
     font-size: 50px;
@@ -79,4 +69,5 @@ header{
     position: fixed;
     top: 0;
     height: 65px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }

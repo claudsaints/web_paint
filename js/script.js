@@ -1,5 +1,6 @@
 const canvas = document.querySelector("canvas"); 
 const contexto = canvas.getContext("2d");
+
 //bottons 
 const inputColor = document.querySelector(".color-in");
 const sizeBtn = document.querySelector(".size-tool");
@@ -13,7 +14,7 @@ let brushSz = 20;
 
 let aTool = "brush"
 
-color = "#000";
+let color = "#000";
 
 //definir o fundo como branco
 const setCanvasBackground = () => {
@@ -29,13 +30,15 @@ window.addEventListener("load", () => {
 })
 //muda a cor com base no escolhido
 inputColor.addEventListener("change",({target}) =>{
-    contexto.fillStyle = target.value
+    contexto.strokeStyle = target.value;
+    color = target.value;
 })
 //evento mouse segurado
 canvas.addEventListener("mousedown", ({clientX,clientY}) => {
     painting = true
     if(aTool == "brush"){
-        draw(clientX,clientY);
+        contexto.beginPath();
+        nDraw(clientX,clientY);
     }
     if(aTool == "rubber"){
         erase(clientX,clientY);
@@ -46,7 +49,8 @@ canvas.addEventListener("mousemove", ({clientX,clientY}) => {
 
     if (painting){
         if(aTool == "brush"){
-            draw(clientX,clientY);
+            nDraw(clientX,clientY);
+            
         }
         if(aTool == "rubber"){
             erase(clientX,clientY);
@@ -58,23 +62,7 @@ canvas.addEventListener("mousemove", ({clientX,clientY}) => {
 //evento mouse livre
 canvas.addEventListener("mouseup", ({clientX,clientY}) => {
     painting = false;
-
 })
-//define o desenho
-const draw = (x,y) => {
-    contexto.globalCompositeOperation = 'source-over'
-    contexto.beginPath();
-    contexto.arc(
-        x -canvas.offsetLeft, 
-        y - canvas.offsetTop,
-        brushSz / 2,
-        0,
-        2 * Math.PI
-    )
-    contexto.fill()
-    
-    // contexto.fillRect(x - canvas.offsetLeft, y - canvas.offsetTop ,brushSz,brushSz);
-}
 //borracha
 const erase = (x,y) => {
     contexto.globalCompositeOperation = 'destination-out'
@@ -115,3 +103,31 @@ downBtn.addEventListener("click", () => {
     link.href = canvas.toDataURL();
     link.click();
 })
+
+//define a caneta
+
+const nDraw = (x,y) => {
+    contexto.globalCompositeOperation = 'source-over'
+    //pick the color
+    contexto.lineWidth = sizeBtn.value; 
+    //Select the brush size
+    contexto.lineTo(
+        x - canvas.offsetLeft,
+        y - canvas.offsetTop
+    );
+    contexto.lineCap = 'round'
+    contexto.stroke();
+}
+//define o desenho em formato de circulo.
+// const draw = (x,y) => {
+//     contexto.globalCompositeOperation = 'source-over'
+//     contexto.beginPath();
+//     contexto.arc(
+//         x -canvas.offsetLeft, 
+//         y - canvas.offsetTop,
+//         brushSz / 2,
+//         0,
+//         2 * Math.PI
+//     )
+//     contexto.fill()
+// }
