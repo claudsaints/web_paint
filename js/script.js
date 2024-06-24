@@ -118,16 +118,7 @@ const nDraw = (x,y) => {
     contexto.lineCap = 'round'
     contexto.stroke();
 }
-//define o desenho em formato de circulo.
-// const draw = (x,y) => {
-//     contexto.globalCompositeOperation = 'source-over'
-//     contexto.beginPath();
-//     contexto.arc(
-//         x -canvas.offsetLeft, 
-//         y - canvas.offsetTop,
-//         brushSz / 2,
-//         0,
-//         2 * Math.PI
-//     )
-//     contexto.fill()
-// }
+
+//configuração android
+
+
